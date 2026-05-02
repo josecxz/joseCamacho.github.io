@@ -1,144 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Desarrollador</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Estilos Base */
-        :root {
-            --bg-color: #0f172a;
-            --text-color: #f8fafc;
-            --accent-color: #38bdf8;
-            --secondary-bg: #1e293b;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        h1 { font-size: 3rem; margin: 0; }
-        p { font-size: 1.2rem; color: #94a3b8; }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Proyectos */
-        .section-title {
-            text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--secondary-bg);
-            padding: 1.5rem;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card h3 { color: var(--accent-color); margin-top: 0; }
-
-        /* Botones y Links */
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover { color: var(--accent-color); }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <!-- Puedes reemplazar esta imagen por la tuya o una de GitHub -->
-        <img src="https://github.com/identicons/johndoe.png" alt="Foto de perfil" class="profile-img">
-        <h1>Hola, soy [Tu Nombre]</h1>
-        <p>Desarrollador Web | Entusiasta de la Tecnología</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>José Enrique Camacho — Appian Architect Log</title>
+        <meta
+            name="description"
+            content="José Enrique Camacho. Lead Appian Architect & Technical Lead especializado en plataformas bancarias y arquitecturas cloud-native."
+        />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Se asume que el archivo style.css contiene los estilos del template original -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="sky">
+            <canvas id="stars"></canvas>
+            <div class="grid" data-grid></div>
         </div>
-    </header>
 
-    <div class="container">
-        <section id="proyectos">
-            <h2 class="section-title">Mis Proyectos</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Proyecto Uno</h3>
-                    <p>Una descripción breve pero interesante de lo que hiciste en este proyecto. Las tecnologías usadas fueron HTML y CSS.</p>
-                    <a href="#" style="color: var(--accent-color);">Ver más →</a>
-                </div>
-                <div class="card">
-                    <h3>Proyecto Dos</h3>
-                    <p>Aplicación web construida para resolver un problema específico. Enfocada en la experiencia de usuario.</p>
-                    <a href="#" style="color: var(--accent-color);">Ver más →</a>
-                </div>
-                <div class="card">
-                    <h3>Proyecto Tres</h3>
-                    <p>Análisis de datos o herramienta de automatización. Muestra tu versatilidad.</p>
-                    <a href="#" style="color: var(--accent-color);">Ver más →</a>
-                </div>
+        <aside class="rail">
+            <div class="rail-top">
+                <div class="mark">JC</div>
+                <div class="mark-sub">JOSÉ ENRIQUE<br />CAMACHO · ARCH</div>
             </div>
-        </section>
-    </div>
+            <nav class="rail-nav" id="rail-nav">
+                <a href="#hero" data-link="hero"><span class="rail-num">00</span><span>HAIL</span></a>
+                <a href="#about" data-link="about"><span class="rail-num">01</span><span>OPERATOR</span></a>
+                <a href="#experience" data-link="experience"><span class="rail-num">02</span><span>LOGBOOK</span></a>
+                <a href="#education" data-link="education"><span class="rail-num">03</span><span>TRAINING</span></a>
+                <a href="#skills" data-link="skills"><span class="rail-num">04</span><span>CAPABILITIES</span></a>
+                <a href="#contact" data-link="contact"><span class="rail-num">05</span><span>FREQUENCY</span></a>
+            </nav>
+            <div class="rail-foot">
+                <div class="telem"><span>LOC</span><span>Madrid, ES</span></div>
+                <div class="telem"><span>SIG</span><span class="accent">●●●●●</span></div>
+                <div class="telem"><span>STATUS</span><span class="status-open">ACTIVE ARCHITECT</span></div>
+            </div>
+        </aside>
 
-    <footer>
-        <p>&copy; 2026 - Hecho con ❤️ para GitHub Pages</p>
-    </footer>
+        <main class="main">
+            <!-- HERO -->
+            <section id="hero" data-section="hero" class="hero">
+                <div class="hero-inner" data-hero-inner>
+                    <div class="hero-head" data-reveal="hero">
+                        <div class="hero-badge">
+                            <span class="pulse"></span>
+                            <span>// APPIAN LEAD · CLOUD ARCHITECTURE · FINTECH</span>
+                        </div>
+                        <h1 class="hero-title">
+                            José Enrique <br />
+                            <span class="accent-italic">Camacho.</span>
+                        </h1>
+                        <p class="hero-lede">
+                            Lead Appian Architect construyendo 
+                            <em class="italic-nowrap">soluciones críticas</em> 
+                            para banca corporativa y wholesale.
+                        </p>
+                    </div>
 
-</body>
+                    <div class="hero-foot" data-reveal="hero" data-reveal-delay="200">
+                        <div class="hero-block">
+                            <div class="block-label">BASED</div>
+                            <div class="block-value">Madrid</div>
+                            <div class="block-sub">España</div>
+                        </div>
+                        <div class="hero-block">
+                            <div class="block-label">CORE</div>
+                            <div class="block-value">Appian L3</div>
+                            <div class="block-sub">Lead Certified</div>
+                        </div>
+                        <div class="hero-block">
+                            <div class="block-label">STACK</div>
+                            <div class="block-value">SQL · AI · Cloud</div>
+                            <div class="block-sub">Modern Tech</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section id="about" data-section="about" class="section">
+                <div class="content-wrap">
+                    <div class="section-head" data-reveal="about">
+                        <div class="section-meta">
+                            <span class="section-n">01</span><span>OPERATOR</span><span class="rule"></span>
+                        </div>
+                        <h2>Resumen Personal</h2>
+                    </div>
+                    <div class="about-grid" data-reveal="about" data-reveal-delay="120">
+                        <p class="lede">
+                            Arquitecto y Desarrollador Líder con amplia experiencia en entornos de banca mayorista[cite: 2].
+                        </p>
+                        <p class="body-p">
+                            Especializado en la traducción de requisitos regulatorios complejos en activos digitales escalables, liderando squads técnicos y definiendo arquitecturas robustas[cite: 2].
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section id="experience" data-section="experience" class="section">
+                <div class="content-wrap">
+                    <div class="section-head" data-reveal="experience">
+                        <div class="section-meta">
+                            <span class="section-n">02</span><span>LOGBOOK</span><span class="rule"></span>
+                        </div>
+                        <h2>Experiencia</h2>
+                    </div>
+                    <div class="log-list">
+                        <article class="log-entry" data-reveal="experience">
+                            <div class="log-stamp"><span>2025.12 —</span><span class="log-tag">PRESENT</span></div>
+                            <div class="log-body">
+                                <div class="log-title">LEAD APPIAN DEVELOPER & ARCHITECT</div>
+                                <div class="log-sub">Capgemini · Madrid</div>
+                                <ul class="bullet-list">
+                                    <li>Líder técnico para plataformas de banca digital a gran escala[cite: 2].</li>
+                                    <li>Migración de sistemas legacy a arquitecturas cloud-native[cite: 2].</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="log-entry" data-reveal="experience">
+                            <div class="log-stamp"><span>2025.08 —</span><span>2025.12</span></div>
+                            <div class="log-body">
+                                <div class="log-title">APPIAN ARCHITECT</div>
+                                <div class="log-sub">Ditech Group · Madrid</div>
+                                <ul class="bullet-list">
+                                    <li>Estrategia técnica para la Administración Pública Española[cite: 2].</li>
+                                    <li>Enfoque en gestión de riesgos IT y cumplimiento de seguridad[cite: 2].</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section id="skills" data-section="skills" class="section">
+                <div class="content-wrap">
+                    <div class="section-head">
+                        <div class="section-meta"><span class="section-n">04</span><span>CAPABILITIES</span><span class="rule"></span></div>
+                        <h2>Habilidades Técnicas</h2>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-block">
+                            <div class="skill-title">APPIAN CORE[cite: 2]</div>
+                            <ul><li>Process Modeling</li><li>Expression Rules</li><li>Records & Sites</li></ul>
+                        </div>
+                        <div class="skill-block">
+                            <div class="skill-title">AI & INNOVATION[cite: 2]</div>
+                            <ul><li>LLM Integration</li><li>Vector DB (FAISS)</li><li>Python · C++</li></ul>
+                        </div>
+                        <div class="skill-block">
+                            <div class="skill-title">DATA[cite: 2]</div>
+                            <ul><li>Expert SQL</li><li>Oracle · MariaDB</li><li>Relational Modeling</li></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" data-section="contact" class="section">
+                <div class="content-wrap">
+                    <div class="section-head">
+                        <div class="section-meta"><span class="section-n">05</span><span>FREQUENCY</span><span class="rule"></span></div>
+                        <h2>Contacto</h2>
+                    </div>
+                    <div class="contact-grid">
+                        <a class="contact-card" href="mailto:jose_ecz95@hotmail.com">
+                            <div class="card-lbl">EMAIL</div>
+                            <div class="card-val">jose_ecz95@hotmail.com[cite: 2]</div>
+                        </a>
+                        <a class="contact-card" href="#">
+                            <div class="card-lbl">LINKEDIN</div>
+                            <div class="card-val">José Enrique Camacho[cite: 2]</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
