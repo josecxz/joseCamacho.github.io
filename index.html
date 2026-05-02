@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Desarrollador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos Base */
+        :root {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+            --secondary-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 3rem; margin: 0; }
+        p { font-size: 1.2rem; color: #94a3b8; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Proyectos */
+        .section-title {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--secondary-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 { color: var(--accent-color); margin-top: 0; }
+
+        /* Botones y Links */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--accent-color); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Puedes reemplazar esta imagen por la tuya o una de GitHub -->
+        <img src="https://github.com/identicons/johndoe.png" alt="Foto de perfil" class="profile-img">
+        <h1>Hola, soy [Tu Nombre]</h1>
+        <p>Desarrollador Web | Entusiasta de la Tecnología</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="proyectos">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Proyecto Uno</h3>
+                    <p>Una descripción breve pero interesante de lo que hiciste en este proyecto. Las tecnologías usadas fueron HTML y CSS.</p>
+                    <a href="#" style="color: var(--accent-color);">Ver más →</a>
+                </div>
+                <div class="card">
+                    <h3>Proyecto Dos</h3>
+                    <p>Aplicación web construida para resolver un problema específico. Enfocada en la experiencia de usuario.</p>
+                    <a href="#" style="color: var(--accent-color);">Ver más →</a>
+                </div>
+                <div class="card">
+                    <h3>Proyecto Tres</h3>
+                    <p>Análisis de datos o herramienta de automatización. Muestra tu versatilidad.</p>
+                    <a href="#" style="color: var(--accent-color);">Ver más →</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Hecho con ❤️ para GitHub Pages</p>
+    </footer>
+
+</body>
+</html>
