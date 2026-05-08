@@ -1,84 +1,425 @@
-<!-- ... (Mismo head que el anterior) ... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>José Enrique Camacho — Lead Appian Architect</title>
+  <meta name="description" content="Portfolio of José Enrique Camacho, Lead Appian Architect & Technical Lead at Capgemini Madrid." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
-    <div class="sky">
-        <canvas id="stars"></canvas>
-        <div class="grid" data-grid></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">JEC</a>
+      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <aside class="rail">
-        <div class="rail-top">
-            <div class="mark">AUTO</div>
-            <div class="mark-sub">JOSÉ CAMACHO<br />CORE · AUTOMATION</div>
-        </div>
-        <nav class="rail-nav" id="rail-nav">
-            <a href="#hero" data-link="hero"><span class="rail-num">00</span><span>SYSTEM_START</span></a>
-            <a href="#experience" data-link="experience"><span class="rail-num">01</span><span>PROCESS_LOG</span></a>
-            <a href="#skills" data-link="skills"><span class="rail-num">02</span><span>TECH_STACK</span></a>
-            <a href="#contact" data-link="contact"><span class="rail-num">03</span><span>ENDPOINT</span></a>
-        </nav>
-        <!-- Telem con enfoque en eficiencia -->
-        <div class="rail-foot">
-            <div class="telem"><span>OPTIMIZATION</span><span class="accent">99.9%</span></div>
-            <div class="telem"><span>ARCH_TYPE</span><span>CLOUD-NATIVE</span></div>
-        </div>
-    </aside>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">José Enrique<br /><span>Camacho</span></h1>
+      <p class="hero-title">Lead Appian Architect &amp; Technical Lead</p>
+      <p class="hero-location">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Madrid, Spain
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-badges">
+        <span class="badge">Appian L3 Lead Certified</span>
+        <span class="badge">Google Cloud AI</span>
+        <span class="badge">MIT Data Science</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <main class="main">
-        <section id="hero" data-section="hero" class="hero">
-            <div class="hero-inner" data-hero-inner>
-                <div class="hero-head" data-reveal="hero">
-                    <div class="hero-badge">
-                        <span class="pulse"></span>
-                        <span>// AUTOMATING ENTERPRISE WORKFLOWS</span>
-                    </div>
-                    <h1 class="hero-title">
-                        Architecting <br />
-                        <span class="accent-italic">Efficiency.</span>
-                    </h1>
-                    <p class="hero-lede">
-                        Especializado en la **automatización de banca mayorista** y la migración de sistemas legacy a arquitecturas cloud de alto rendimiento.
-                    </p>
-                </div>
-                <!-- Bloques de métricas -->
-                <div class="hero-foot" data-reveal="hero" data-reveal-delay="200">
-                    <div class="hero-block">
-                        <div class="block-label">AUTOMATION CORE</div>
-                        <div class="block-value">Appian L3</div>
-                        <div class="block-sub">Lead Certified Architect</div>
-                    </div>
-                    <div class="hero-block">
-                        <div class="block-label">AI INTEGRATION</div>
-                        <div class="block-value">GenAI</div>
-                        <div class="block-sub">LLM & Vector DBs</div>
-                    </div>
-                </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2>Turning complexity into<br /><em>scalable solutions</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Accomplished <strong>Lead Appian Developer</strong> with extensive experience in Corporate and
+            Wholesale Banking environments. I lead technical squads, define robust architectures, and
+            deliver mission-critical solutions — specialising in translating complex regulatory
+            requirements into scalable digital assets.
+          </p>
+          <p>
+            My background spans electrical engineering, enterprise BPM, AI/ML integration, and
+            cloud-native migrations. Whether it's engineering custom platform tooling, optimising
+            database execution plans, or mentoring the next generation of developers, I bring both
+            depth and ownership to every engagement.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">6+</span>
+              <span class="stat-label">Years Experience</span>
             </div>
-        </section>
-
-        <!-- Nueva sección de Skills enfocada en automatización -->
-        <section id="skills" data-section="skills" class="section">
-            <div class="content-wrap">
-                <div class="section-head">
-                    <div class="section-meta"><span class="section-n">02</span><span>CAPABILITIES</span><span class="rule"></span></div>
-                    <h2>Automation Stack</h2>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-block">
-                        <div class="skill-title">PROCESS ENGINE[cite: 2]</div>
-                        <ul><li>Appian Workflows</li><li>RPA Integration</li><li>Business Logic</li></ul>
-                    </div>
-                    <div class="skill-block">
-                        <div class="skill-title">DATA PIPELINES[cite: 2]</div>
-                        <ul><li>SQL Performance Tuning</li><li>ETL Processes</li><li>Real-time Data</li></ul>
-                    </div>
-                    <div class="skill-block">
-                        <div class="skill-title">INTEGRATIONS[cite: 2]</div>
-                        <ul><li>REST/SOAP APIs</li><li>Connected Systems</li><li>Microservices</li></ul>
-                    </div>
-                </div>
+            <div class="stat">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Countries</span>
             </div>
-        </section>
-        <!-- ... (Resto de secciones: Experience y Contacto) ... -->
-    </main>
-    <script src="script.js"></script>
+            <div class="stat">
+              <span class="stat-number">5</span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">L3</span>
+              <span class="stat-label">Appian Capability</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon">⚙️</div>
+            <h3>Architecture</h3>
+            <p>Designing cloud-native, enterprise-grade Appian platforms for regulated banking environments.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🤖</div>
+            <h3>AI &amp; Innovation</h3>
+            <p>LLM integration with Ollama, vector databases (FAISS), Python, and TensorFlow pipelines.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">👥</div>
+            <h3>Technical Leadership</h3>
+            <p>Leading cross-functional squads, code reviews, mentoring, and driving engineering standards.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🗄️</div>
+            <h3>Data &amp; Performance</h3>
+            <p>Expert SQL tuning, relational data modelling, and system-level performance optimisation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career</span>
+        <h2>Work <em>Experience</em></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" data-index="0">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Dec 2025 — Present</div>
+          <div class="timeline-card current">
+            <div class="timeline-card-header">
+              <div>
+                <h3>Lead Appian Developer &amp; Architect</h3>
+                <p class="company">Capgemini · Madrid, Spain</p>
+              </div>
+              <span class="timeline-badge current-badge">Current</span>
+            </div>
+            <ul>
+              <li>Acting as Technical Lead for large-scale digital banking platforms, ensuring solution design alignment with long-term enterprise strategy.</li>
+              <li>Leading complex technical migrations from legacy systems to modern cloud-native architectures focused on scalability and stability in highly regulated environments.</li>
+              <li>Driving engineering standards and best practices across the squad; mentoring junior developers and conducting rigorous code reviews.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Appian</span><span>Cloud-Native</span><span>Banking</span><span>Technical Lead</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-index="1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2025 — Dec 2025</div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3>Appian Architect</h3>
+                <p class="company">Ditech Group · Madrid, Spain</p>
+              </div>
+            </div>
+            <ul>
+              <li>Defined architecture and technical strategy for strategic Appian platforms, emphasising IT risk management, security compliance, and data governance.</li>
+              <li>Translated complex business requirements into robust Appian solutions for the Spanish Public Administration.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Appian</span><span>IT Risk</span><span>Data Governance</span><span>Public Sector</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-index="2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Apr 2023 — Aug 2025</div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3>Senior Consultant</h3>
+                <p class="company">Ditech Group · Madrid, Spain</p>
+              </div>
+            </div>
+            <ul>
+              <li>Led a cross-functional squad responsible for the stability and evolution of multiple business-critical applications within a leading financial institution.</li>
+              <li>Conducted deep-dive analysis of system logs and database execution plans to identify bottlenecks, implementing optimisations that improved response times and resource efficiency.</li>
+              <li>Engineered custom platform tools (Garbage Collection &amp; Instance Management) to optimise memory usage and system health on enterprise-level Appian installations.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Appian</span><span>SQL</span><span>Performance Tuning</span><span>Finance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-index="3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Aug 2019 — Apr 2023</div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3>Appian Senior Consultant</h3>
+                <p class="company">Deft Consulting · Quito, Ecuador</p>
+              </div>
+            </div>
+            <ul>
+              <li>Delivered end-to-end Appian solutions for Document Management and Compliance, managing sensitive information under strict confidentiality protocols.</li>
+              <li>Integrated Appian with legacy systems and RPA to automate data migration and web scraping workflows.</li>
+              <li>Expert in Agile/Scrum ceremonies (Sprint 0, Story Mapping, Estimation) for rapid, iterative delivery.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Appian</span><span>RPA</span><span>Agile/Scrum</span><span>REST/SOAP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Expertise</span>
+        <h2>Skills &amp; <em>Certifications</em></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          </div>
+          <h3>Appian Expert</h3>
+          <p class="skill-subtitle">Lead Certified · L3 Capability</p>
+          <div class="skill-pills">
+            <span>CDT</span><span>Data Stores</span><span>Expression Rules</span>
+            <span>Process Modeling</span><span>Sites</span><span>Records</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+          </div>
+          <h3>Integrations</h3>
+          <p class="skill-subtitle">Advanced Connectivity</p>
+          <div class="skill-pills">
+            <span>WebAPIs</span><span>REST</span><span>SOAP</span>
+            <span>JSON</span><span>Connected Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+          </div>
+          <h3>Data &amp; Databases</h3>
+          <p class="skill-subtitle">Expert Level</p>
+          <div class="skill-pills">
+            <span>MySQL</span><span>MariaDB</span><span>Oracle</span>
+            <span>Relational Modeling</span><span>Performance Tuning</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-1 14.93V15h2v1.93A8.01 8.01 0 0120 9H4a8.01 8.01 0 018 7.93zm1-10.93a3 3 0 110 6 3 3 0 010-6z"/></svg>
+          </div>
+          <h3>AI &amp; Innovation</h3>
+          <p class="skill-subtitle">Research &amp; Implementation</p>
+          <div class="skill-pills">
+            <span>LLM Integration</span><span>Ollama</span><span>FAISS</span>
+            <span>Python</span><span>C++</span><span>TensorFlow</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <h3>Agile &amp; Leadership</h3>
+          <p class="skill-subtitle">Team &amp; Delivery</p>
+          <div class="skill-pills">
+            <span>Technical Leadership</span><span>Mentoring</span>
+            <span>Scrum Master</span><span>Sprint 0</span><span>Code Reviews</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+          </div>
+          <h3>Languages</h3>
+          <p class="skill-subtitle">Communication</p>
+          <div class="skill-pills">
+            <span>Spanish · Native</span><span>English · C1</span><span>German · Basic</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CREDENTIALS -->
+      <div class="credentials">
+        <h3 class="credentials-title">Credentials &amp; Certifications</h3>
+        <div class="credentials-grid">
+          <div class="credential-card">
+            <div class="credential-logo gcp">GCP</div>
+            <div>
+              <p class="credential-name">Google Cloud Certified</p>
+              <p class="credential-sub">Generative AI Leader</p>
+            </div>
+          </div>
+          <div class="credential-card">
+            <div class="credential-logo appian">AP</div>
+            <div>
+              <p class="credential-name">Appian Certified</p>
+              <p class="credential-sub">Lead Developer</p>
+            </div>
+          </div>
+          <div class="credential-card">
+            <div class="credential-logo appian">AP</div>
+            <div>
+              <p class="credential-name">Appian Certified</p>
+              <p class="credential-sub">Senior Developer</p>
+            </div>
+          </div>
+          <div class="credential-card">
+            <div class="credential-logo mit">MIT</div>
+            <div>
+              <p class="credential-name">MIT Professional</p>
+              <p class="credential-sub">Applied Data Science (AI/ML)</p>
+            </div>
+          </div>
+          <div class="credential-card">
+            <div class="credential-logo scrum">SCR</div>
+            <div>
+              <p class="credential-name">Scrum Foundations</p>
+              <p class="credential-sub">Professional Certificate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Background</span>
+        <h2>Education &amp; <em>Formation</em></h2>
+      </div>
+      <div class="education-grid">
+        <div class="edu-card">
+          <div class="edu-year">2025 — 2026</div>
+          <div class="edu-icon">🎓</div>
+          <h3>Master's in Project Management</h3>
+          <p class="edu-school">EAE Business School</p>
+          <p class="edu-location">Madrid, Spain</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2013 — 2018</div>
+          <div class="edu-icon">⚡</div>
+          <h3>B.S. Electrical Engineering</h3>
+          <p class="edu-school">Universidad San Francisco de Quito</p>
+          <p class="edu-location">Quito, Ecuador · Specialisation: Automation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Talk</span>
+        <h2>Get In <em>Touch</em></h2>
+        <p class="section-desc">Open to new opportunities, collaborations, and interesting projects.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:jose_ecz95@hotmail.com">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">jose_ecz95@hotmail.com</p>
+          </div>
+        </a>
+        <a class="contact-card" href="tel:+34672090766">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Phone</p>
+            <p class="contact-value">+34 672 090 766</p>
+          </div>
+        </a>
+        <div class="contact-card static">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Location</p>
+            <p class="contact-value">Madrid, Spain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p class="footer-name">José Enrique Camacho</p>
+      <p class="footer-role">Lead Appian Architect &amp; Technical Lead</p>
+      <p class="footer-copy">© <span id="year"></span> · Built for GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+</html>
